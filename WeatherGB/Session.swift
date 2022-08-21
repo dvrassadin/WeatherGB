@@ -8,5 +8,9 @@
 import UIKit
 
 class Session {
+    static var shared = Session()
     
+    private init () {}
+    
+    let APIKey = "62ba08577099f0a3fd9987e6f51e8946"
 }

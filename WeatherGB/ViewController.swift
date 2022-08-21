@@ -8,12 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    let service = Service()
+   
+    override func viewWillAppear(_ animated: Bool) {
+        service.currentSPBWeather { weather in
+            print("date: \(weather.date)")
+            print("temperature: \(weather.main.temperature) °C at \(weather.name)")
+        }
     }
-
-
 }
 
